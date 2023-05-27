@@ -2,7 +2,7 @@ package com.wsdev.ecommerce.entities;
 
 import jakarta.persistence.*;
 
-import java.security.Identity;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +14,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @Column(unique = true)
     private String email;
     private String phone;
     private LocalDate birthDate;
